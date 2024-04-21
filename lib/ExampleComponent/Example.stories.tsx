@@ -9,17 +9,19 @@ export default meta
 
 type Story = StoryObj<typeof ExampleComponent>
 
-export const Default: Story = { 
+export const Small: Story = {
   args: {
-    children: 'Testing',
-    size: 'sm'
+    children: 'Small',
+    size: 'sm',
+    variant: 'solid'
   }
 }
 
 export const Medium: Story = {
   args: {
-    children: 'Custom',
-    size: 'md'
+    children: 'Medium',
+    size: 'md',
+    variant: 'outline'
   }
 }
 
@@ -27,6 +29,6 @@ export const Large: Story = {
   args: {
     children: 'Large',
     size: 'lg',
-    className: 'bg-red-500'
+    variant: "ghost"
   }
 }
