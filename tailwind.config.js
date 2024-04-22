@@ -2,29 +2,29 @@
 export default {
   content: [
     // Reference lib only
-    './lib/**/*.{js,ts,jsx,tsx}'
+    './lib/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-        'white': '#ffffff',
-        'black': '#000000',
-        'primary': '#343434',
-        'secondary': '#E9EBF8',
-        'success': '#58B09C',
-        'danger': '#F45866',
-        'warning': '#F7EF99',
-        'info': '#4A60F0'
+        white: '#ffffff',
+        black: '#000000',
+        primary: '#343434',
+        secondary: '#E9EBF8',
+        success: '#58B09C',
+        danger: '#F45866',
+        warning: '#F7EF99',
+        info: '#4A60F0',
       },
       spacing: {
-        'xxs': '10px',
-        'xs': '12px',
-        'sm': '14px',
-        'md': '18px',
-        'lg': '24px',
-        'xl': '32px',
-        'xxl': '48px',
-        'xxxl': '60px'
+        xxs: '10px',
+        xs: '12px',
+        sm: '14px',
+        md: '18px',
+        lg: '24px',
+        xl: '32px',
+        xxl: '48px',
+        xxxl: '60px',
       },
       fontFamily: {
         sans: ['Roboto Flex', 'sans-serif'],
@@ -47,17 +47,16 @@ export default {
       lg: ['24px', '32px'],
       xl: ['32px', '40px'],
       xxl: ['48px', '60px'],
-      xxxl: ['60px', '72px']
+      xxxl: ['60px', '72px'],
     },
   },
   plugins: [
     function ({ addUtilities, theme }) {
-      const newUtilities = {};
+      const newUtilities = {}
       Object.entries(theme('fontVariations')).forEach(([key, value]) => {
-        newUtilities[`.font-${key}`] = value;
-      });
-      addUtilities(newUtilities, ['responsive', 'hover']);
-    }
+        newUtilities[`.font-${key}`] = value
+      })
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    },
   ],
 }
-

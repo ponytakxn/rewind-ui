@@ -3,7 +3,7 @@ import React from 'react'
 import { Button } from './Button'
 
 const meta: Meta<typeof Button> = {
-  component: Button
+  component: Button,
 }
 
 export default meta
@@ -15,8 +15,8 @@ export const Solid: Story = {
     size: 'sm',
     variant: 'solid',
     color: 'primary',
-    children: 'Solid'
-  }
+    children: 'Solid',
+  },
 }
 
 export const Outline: Story = {
@@ -24,8 +24,8 @@ export const Outline: Story = {
     size: 'md',
     variant: 'outline',
     color: 'primary',
-    children: 'Outline'
-  }
+    children: 'Outline',
+  },
 }
 
 export const Ghost: Story = {
@@ -33,21 +33,39 @@ export const Ghost: Story = {
     size: 'lg',
     variant: 'ghost',
     color: 'primary',
-    children: 'Ghost'
-  }
+    children: 'Ghost',
+  },
 }
 
 export const Colors: Story = {
-  render: () => <div className='grid gap-8'>
-    <Button size="md" variant="solid" color="primary">Primary</Button>
-    <Button size="md" variant="solid" color="secondary">Secondary</Button>
-    <Button size="md" variant="solid" color="danger">Danger</Button>
-    <Button size="md" variant="solid" color="success">Success</Button>
-    <Button size="md" variant="solid" color="info">Info</Button>
-    <Button size="md" variant="solid" color="warning">Warning</Button>
-  </div>
+  render: () => (
+    <div className='grid gap-8'>
+      <Button size='md' variant='solid' color='primary'>
+        Primary
+      </Button>
+      <Button size='md' variant='solid' color='secondary'>
+        Secondary
+      </Button>
+      <Button size='md' variant='solid' color='danger'>
+        Danger
+      </Button>
+      <Button size='md' variant='solid' color='success'>
+        Success
+      </Button>
+      <Button size='md' variant='solid' color='info'>
+        Info
+      </Button>
+      <Button size='md' variant='solid' color='warning'>
+        Warning
+      </Button>
+    </div>
+  ),
 }
 
 export const Disabled: Story = {
-  render: () => <Button size="md" variant="solid" color="primary" disabled>Disabled</Button>
+  render: () => (
+    <Button size='md' variant='solid' color='primary' disabled>
+      Disabled
+    </Button>
+  ),
 }

@@ -4,7 +4,9 @@ function App() {
   return (
     <>
       <div className='grid auto-cols-max'>
-        <Button size='md' variant='outline' color='primary' disabled>Testing</Button>
+        <Button size='md' variant='outline' color='primary' disabled>
+          Testing
+        </Button>
       </div>
     </>
   )
