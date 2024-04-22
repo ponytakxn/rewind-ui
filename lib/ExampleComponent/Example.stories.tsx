@@ -29,6 +29,6 @@ export const Large: Story = {
   args: {
     children: 'Large',
     size: 'lg',
-    variant: "ghost"
+    variant: 'ghost'
   }
 }
