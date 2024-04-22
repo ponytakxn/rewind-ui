@@ -1,10 +1,10 @@
-import { ExampleComponent } from 'rewind-ui'
+import { Button } from 'rewind-ui'
 
 function App() {
   return (
     <>
-      <div>
-        <ExampleComponent size='sm'>Testing</ExampleComponent>
+      <div className='grid auto-cols-max'>
+        <Button size='md' variant='outline' color='primary' disabled>Testing</Button>
       </div>
     </>
   )
