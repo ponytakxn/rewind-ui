@@ -3,7 +3,7 @@ import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '../utils/index'
 
 const buttonStyles = cva([
-  'font-semibold',
+  "font-semibold",
   'disabled:cursor-not-allowed',
   'disabled:bg-primary/50',
   'disabled:text-white/50',
