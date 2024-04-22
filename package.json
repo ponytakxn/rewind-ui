@@ -14,14 +14,6 @@
       "require": "./dist/rewind-ui.umd.cjs"
     }
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --fix"
-  },
   "scripts": {
     "dev": "vite",
     "prebuild": "rm -rf dist",
@@ -31,6 +23,9 @@
     "publish": "npm run build && npm publish --access public",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
