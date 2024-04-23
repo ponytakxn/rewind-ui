@@ -6,7 +6,7 @@ import { cn } from '../utils/index';
 const checkboxStyles = cva(
   [
     'border',
-    'border-primary',
+    "border-primary",
   ],
   {
     variants: {
