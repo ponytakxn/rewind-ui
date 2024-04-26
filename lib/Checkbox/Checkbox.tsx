@@ -1,4 +1,3 @@
-import React from 'react'
 import { forwardRef, type ComponentProps } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '../utils/index'
@@ -31,5 +30,3 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     )
   }
 )
-
-export default Checkbox
