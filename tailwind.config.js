@@ -17,6 +17,7 @@ export default {
         info: '#4A60F0',
       },
       spacing: {
+        xxxs: '4px',
         xxs: '10px',
         xs: '12px',
         sm: '14px',
