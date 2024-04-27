@@ -18,7 +18,7 @@ export default {
       },
       spacing: {
         xxxs: '4px',
-        xxs: '10px',
+        xxs: '8px',
         xs: '12px',
         sm: '14px',
         md: '18px',
