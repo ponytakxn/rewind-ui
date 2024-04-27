@@ -2,33 +2,49 @@ import React, { forwardRef, type ComponentProps } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '../utils/index'
 
-const BadgeStyles = cva(['rounded-full', 'your-class-names'], {
+const BadgeStyles = cva(['rounded-md'], {
   variants: {
     size: {
-      sm: 'w-sm h-sm',
-      md: 'w-md h-md',
+      sm: 'px-xxxs py-xxxs',
+      md: 'px-xs py-xxs',
     },
     color: {
-      primary: 'bg-primary',
+      primary: 'bg-primary text-white',
+      secondary: 'bg-secondary text-primary',
+      info: 'bg-info text-white',
+    },
+    variant: {
+      solid: '',
+      outline: 'border',
     },
   },
   compoundVariants: [
     {
-      size: 'sm',
+      variant: 'outline',
       color: 'primary',
-      className: 'text-sm bg-blue-500',
+      className: 'bg-transparent border-primary text-primary',
+    },
+    {
+      variant: 'outline',
+      color: 'secondary',
+      className: 'bg-transparent border-secondary text-secondary',
+    },
+    {
+      variant: 'outline',
+      color: 'info',
+      className: 'bg-transparent border-info text-info',
     },
   ],
 })
 
 type BadgeProps = ComponentProps<'span'> & VariantProps<typeof BadgeStyles>
 
-const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
-  ({ children, size, color, className, ...props }, ref) => {
+export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
+  ({ children, size, color, variant, className, ...props }, ref) => {
     return (
       <span
         ref={ref}
-        className={cn(BadgeStyles({ size, color, className }))}
+        className={cn(BadgeStyles({ size, color, variant, className }))}
         {...props}
       >
         {children}
@@ -36,4 +52,3 @@ const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
     )
   }
 )
-export default Badge

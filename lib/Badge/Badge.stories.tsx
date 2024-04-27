@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import Badge from './Badge'
+import { Badge } from './Badge'
 
 const meta: Meta<typeof Badge> = {
   title: 'Badge',
@@ -10,10 +10,20 @@ export default meta
 
 type Story = StoryObj<typeof Badge>
 
-export const Primary: Story = {
+export const SolidPrimary: Story = {
   args: {
     size: 'md',
     color: 'primary',
-    children: 'Primary Badge',
+    variant: 'solid',
+    children: 'Solid Primary',
+  },
+}
+
+export const Small: Story = {
+  args: {
+    size: 'sm',
+    color: 'secondary',
+    variant: 'solid',
+    children: 'Secondary',
   },
 }
