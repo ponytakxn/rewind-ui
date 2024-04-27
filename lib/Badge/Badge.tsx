@@ -1,8 +1,8 @@
-import React, { forwardRef, type ComponentProps } from 'react'
+import { forwardRef, type ComponentProps } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '../utils/index'
 
-const BadgeStyles = cva(['rounded-md'], {
+const badgeStyles = cva(['rounded-md'], {
   variants: {
     size: {
       sm: 'px-xxxs py-xxxs',
@@ -37,14 +37,14 @@ const BadgeStyles = cva(['rounded-md'], {
   ],
 })
 
-type BadgeProps = ComponentProps<'span'> & VariantProps<typeof BadgeStyles>
+type BadgeProps = ComponentProps<'span'> & VariantProps<typeof badgeStyles>
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
   ({ children, size, color, variant, className, ...props }, ref) => {
     return (
       <span
         ref={ref}
-        className={cn(BadgeStyles({ size, color, variant, className }))}
+        className={cn(badgeStyles({ size, color, variant, className }))}
         {...props}
       >
         {children}
