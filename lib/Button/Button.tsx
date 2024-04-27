@@ -16,8 +16,8 @@ const buttonStyles = cva(
   {
     variants: {
       size: {
-        sm: 'text-base py-xs px-md',
-        md: 'text-md py-md px-xl',
+        sm: 'text-base py-xxs px-sm',
+        md: 'text-md py-sm px-xl',
         lg: 'text-lg py-md px-xxxl',
       },
       variant: {
