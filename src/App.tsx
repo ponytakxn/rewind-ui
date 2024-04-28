@@ -8,7 +8,7 @@ function App() {
           Testing
         </Button>
       </div>
-      <CarouselContainer tabs={3}>
+      <CarouselContainer>
         <CarouselItem className='text-xxl font-bold text-primary'>
           Holi
         </CarouselItem>
