@@ -12,15 +12,14 @@ const labelStyles = cva(['font-semibold'], {
   },
 })
 
-type LabelProps = ComponentProps<'label'> &
-  VariantProps<typeof labelStyles> & { disabled?: boolean }
+type LabelProps = ComponentProps<'label'> & VariantProps<typeof labelStyles>
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>(
-  ({ children, size, className, disabled, ...props }, ref) => {
+  ({ children, size, className, ...props }, ref) => {
     return (
       <label
         ref={ref}
-        className={cn(labelStyles({ size, className }), { disabled: disabled })}
+        className={cn(labelStyles({ size, className }))}
         {...props}
       >
         {children}

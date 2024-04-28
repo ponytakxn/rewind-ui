@@ -17,13 +17,6 @@ export const Basic: Story = {
   },
 }
 
-export const Disabled: Story = {
-  args: {
-    children: 'Disabled Label',
-    disabled: true,
-  },
-}
-
 export const Sized: Story = {
   render: () => (
     <div>
