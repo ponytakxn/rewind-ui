@@ -1,4 +1,5 @@
 import { Button, CarouselContainer, CarouselItem } from 'rewind-ui'
+import { Button, CarouselContainer, CarouselItem } from 'rewind-ui'
 
 function App() {
   return (
