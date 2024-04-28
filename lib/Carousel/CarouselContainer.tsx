@@ -1,18 +1,21 @@
-import { forwardRef, useState, type ComponentProps } from 'react'
+import {
+  Children,
+  forwardRef,
+  useEffect,
+  useState,
+  type ComponentProps,
+} from 'react'
 import { cva } from 'class-variance-authority'
 import { cn } from '../utils/index'
 
 const carouselStyles = cva(['relative', 'overflow-hidden', 'h-[40vh]'])
 
-type CarouselContainerProps = {
-  tabs: number
-}
-
-type CarouselProps = ComponentProps<'section'> & CarouselContainerProps
+type CarouselProps = ComponentProps<'section'>
 
 export const CarouselContainer = forwardRef<HTMLElement, CarouselProps>(
-  ({ tabs, children, className, ...props }, ref) => {
+  ({ children, className, ...props }, ref) => {
     const [current, setCurrent] = useState(0)
+    const [tabs, setTab] = useState(0)
 
     const previousSlide = () => {
       current == 0 ? setCurrent(tabs - 1) : setCurrent(current - 1)
@@ -21,6 +24,11 @@ export const CarouselContainer = forwardRef<HTMLElement, CarouselProps>(
     const nextSlide = () => {
       current == tabs - 1 ? setCurrent(0) : setCurrent(current + 1)
     }
+
+    useEffect(() => {
+      const tabCount = Children.count(children)
+      setTab(tabCount)
+    }, [children])
 
     return (
       <section
