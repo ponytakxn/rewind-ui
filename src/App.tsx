@@ -1,4 +1,4 @@
-import { Button } from 'rewind-ui'
+import { Button, CarouselContainer, CarouselItem } from 'rewind-ui'
 
 function App() {
   return (
@@ -8,6 +8,17 @@ function App() {
           Testing
         </Button>
       </div>
+      <CarouselContainer tabs={3}>
+        <CarouselItem className='text-xxl font-bold text-primary'>
+          Holi
+        </CarouselItem>
+        <CarouselItem className='text-xxl font-bold text-info'>
+          Tai soli
+        </CarouselItem>
+        <CarouselItem className='text-xxl font-bold text-danger'>
+          Teni pololi
+        </CarouselItem>
+      </CarouselContainer>
     </>
   )
 }
