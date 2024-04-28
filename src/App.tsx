@@ -1,4 +1,5 @@
 import { Button } from 'rewind-ui'
+import { CarouselExample } from '../lib/Carousel/CarouselExample'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
           Testing
         </Button>
       </div>
+      <CarouselExample tabs={3} />
     </>
   )
 }
