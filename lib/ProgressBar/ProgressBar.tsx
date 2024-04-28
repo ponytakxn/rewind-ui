@@ -2,7 +2,7 @@ import { forwardRef, ComponentProps } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '../utils/index'
 
-const progressBarStyles = cva(['h-4', 'rounded-full', 'overflow-hidden'], {
+const progressBarStyles = cva([], {
   variants: {
     color: {
       primary: 'bg-primary',
@@ -12,6 +12,14 @@ const progressBarStyles = cva(['h-4', 'rounded-full', 'overflow-hidden'], {
       info: 'bg-info',
       warning: 'bg-warning',
     },
+    bgColor: {
+      primary: 'bg-primary/25',
+      secondary: 'bg-secondary/25',
+      danger: 'bg-danger/25',
+      success: 'bg-success/25',
+      info: 'bg-info/25',
+      warning: 'bg-warning/25',
+    },
   },
 })
 
@@ -19,18 +27,20 @@ type ProgressBarProps = ComponentProps<'div'> &
   VariantProps<typeof progressBarStyles> & { progress?: number }
 
 export const ProgressBar = forwardRef<HTMLDivElement, ProgressBarProps>(
-  ({ progress = 0, className, color, ...props }, ref) => {
-    const progressStyle = {
-      width: `${progress}%`,
-    }
-
+  ({ progress, className, bgColor, color, ...props }, ref) => {
     return (
       <div
         ref={ref}
-        className={cn(progressBarStyles({ className, color }), 'relative')}
+        className={cn(
+          progressBarStyles({ bgColor, className }),
+          'h-4 overflow-hidden'
+        )}
         {...props}
       >
-        <div className='h-full' style={progressStyle}></div>
+        <div
+          className={cn(progressBarStyles({ color }), 'h-full')}
+          style={{ width: `${progress}%` }}
+        />
       </div>
     )
   }
