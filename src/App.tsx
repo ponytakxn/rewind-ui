@@ -1,4 +1,5 @@
 import { Button, CarouselContainer, CarouselItem } from 'rewind-ui'
+import { Button, CarouselContainer, CarouselItem } from 'rewind-ui'
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
           Testing
         </Button>
       </div>
-      <CarouselContainer tabs={3}>
+      <CarouselContainer>
         <CarouselItem className='text-xxl font-bold text-primary'>
           Holi
         </CarouselItem>
