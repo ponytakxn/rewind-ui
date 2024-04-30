@@ -1,4 +1,5 @@
 import { Button, CarouselContainer, CarouselItem } from 'rewind-ui'
+import { Popover } from '../lib/Popover/Popover'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           Teni pololi
         </CarouselItem>
       </CarouselContainer>
+      <Popover />
     </>
   )
 }
