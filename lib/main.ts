@@ -10,3 +10,9 @@ export { Label } from './Label/Label'
 export { ProgressBar } from './ProgressBar/ProgressBar'
 export { CarouselContainer, CarouselItem } from './Carousel/Carousel'
 export { ScrollArea } from './ScrollArea/ScrollArea'
+export {
+  PopoverContainer,
+  PopoverTrigger,
+  PopoverContent,
+} from './Popover/Popover'
+export { Switch } from './Switch/Switch'
