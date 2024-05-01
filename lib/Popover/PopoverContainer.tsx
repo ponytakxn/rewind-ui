@@ -1,26 +1,36 @@
-import React, { useState } from 'react'
+import { ComponentProps, forwardRef, useState } from 'react'
 import { PopoverContext, orientationType } from './Popover'
+import { cva } from 'class-variance-authority'
+import { cn } from '../utils'
+
+const popoverContainerStyles = cva(['relative', 'inline-block'])
 
 type PopoverContainerProps = {
   orientation: orientationType
-  children: React.ReactNode
 }
 
-export const PopoverContainer = ({
-  orientation,
-  children,
-}: PopoverContainerProps) => {
-  const [isOpen, setIsOpen] = useState(false)
+type PopoverProps = ComponentProps<'section'> & PopoverContainerProps
 
-  const popoverContext = {
-    orientation,
-    isOpen,
-    setIsOpen,
+export const PopoverContainer = forwardRef<HTMLElement, PopoverProps>(
+  ({ orientation, children, className, ...props }, ref) => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const popoverContext = {
+      orientation,
+      isOpen,
+      setIsOpen,
+    }
+
+    return (
+      <PopoverContext.Provider value={popoverContext}>
+        <section
+          ref={ref}
+          className={cn(popoverContainerStyles({ className }))}
+          {...props}
+        >
+          {children}
+        </section>
+      </PopoverContext.Provider>
+    )
   }
-
-  return (
-    <PopoverContext.Provider value={popoverContext}>
-      <div className='relative inline-block'>{children}</div>
-    </PopoverContext.Provider>
-  )
-}
+)

@@ -1,15 +1,26 @@
-import React, { useContext } from 'react'
+import { ComponentProps, forwardRef, useContext } from 'react'
 import { PopoverContext } from './Popover'
+import { cva } from 'class-variance-authority'
+import { cn } from '../utils'
 
-export const PopoverTrigger = ({ children }) => {
+const popoverTriggerStyles = cva(['appearance-none', 'inline-block'])
+
+type PopoverTriggerProps = ComponentProps<'button'>
+
+export const PopoverTrigger = forwardRef<
+  HTMLButtonElement,
+  PopoverTriggerProps
+>(({ children, className, ...props }, ref) => {
   const { isOpen, setIsOpen } = useContext(PopoverContext)
 
   return (
     <button
+      ref={ref}
       onClick={() => setIsOpen(!isOpen)}
-      className='appearance-none inline-block'
+      className={cn(popoverTriggerStyles({ className }))}
+      {...props}
     >
       {children}
     </button>
   )
-}
+})
