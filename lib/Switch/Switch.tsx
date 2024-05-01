@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react'
+import React, { ComponentProps, forwardRef, useState } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '../utils/index'
 
@@ -9,6 +9,8 @@ const switchStyles = cva(
     'w-14 h-8 rounded-full p-1 relative',
     'transition-colors duration-300 ease-in-out',
     'bg-gray-300',
+    'appearance-none',
+    'relative',
   ],
   {
     variants: {
@@ -20,58 +22,65 @@ const switchStyles = cva(
   }
 )
 
-const indicatorStyles = cva(
-  [
-    'w-6 h-6 rounded-full bg-white shadow-md absolute',
-    'transform duration-300',
-  ],
-  {
-    variants: {
-      translate: {
-        left: 'translate-x-0',
-        right: 'translate-x-full',
-      },
-    },
-  }
-)
+const indicatorStyles = cva([
+  'w-6 h-6 rounded-full bg-white shadow-md absolute',
+  'transform duration-300',
+  'cursor-pointer',
+  'absolute',
+])
 
-type SwitchVariantProps = {
-  color?: 'primary' | 'secondary'
+type SwitchProp = {
+  id: string
 }
 
-export type SwitchProps = {
-  onChange?: (checked: boolean) => void
-  checked?: boolean
-} & VariantProps<typeof switchStyles> &
-  SwitchVariantProps
+type SwitchProps = ComponentProps<'input'> &
+  VariantProps<typeof switchStyles> &
+  SwitchProp
 
-export const Switch = forwardRef<HTMLDivElement, SwitchProps>(
-  ({ color = 'primary', onChange, checked = false }, ref) => {
-    const [isChecked, setIsChecked] = useState(checked)
+export const Switch = forwardRef<HTMLInputElement, SwitchProps>(
+  ({ color, id, ...props }, ref) => {
+    const [isChecked, setIsChecked] = useState(false)
 
     const handleChange = () => {
-      const newValue = !isChecked
-      setIsChecked(newValue)
-      if (onChange) onChange(newValue)
+      setIsChecked(!isChecked)
+    }
+
+    const translateSwitch = () => {
+      switch (isChecked) {
+        case false:
+          return {
+            top: '50%',
+            transform: 'translate(calc(0% + 4px), -50%)',
+          }
+        case true:
+          return {
+            top: '50%',
+            transform: 'translate(calc(100% + 4px), -50%)',
+          }
+        default:
+          return {}
+      }
     }
 
     return (
       <div
-        ref={ref}
-        className={cn(switchStyles({ color }))}
-        role='switch'
-        aria-checked={isChecked}
+        className='relative inline-block'
         onClick={handleChange}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') handleChange()
         }}
-        tabIndex={0}
       >
-        <div
-          className={cn(
-            indicatorStyles({ translate: isChecked ? 'right' : 'left' })
-          )}
-        ></div>
+        <input
+          ref={ref}
+          className={cn(switchStyles({ color }))}
+          type='checkbox'
+          role='switch'
+          aria-checked={isChecked}
+          defaultChecked={isChecked}
+          id={id}
+          {...props}
+        />
+        <div className={cn(indicatorStyles())} style={translateSwitch()}></div>
       </div>
     )
   }

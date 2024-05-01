@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 import { Switch } from './Switch'
 
@@ -11,37 +10,23 @@ export default meta
 
 type Story = StoryObj<typeof Switch>
 
-export const Primary: Story = ({ args }) => {
-  const [checked, setChecked] = useState(false)
-
-  const handleChange = (newValue: boolean) => {
-    setChecked(newValue)
-  }
-
-  return <Switch {...args} checked={checked} onChange={handleChange} />
+export const Default: Story = {
+  args: {
+    color: 'primary',
+    id: 'switch-1',
+  },
 }
 
-Primary.args = {
-  color: 'primary',
+export const Primary: Story = {
+  args: {
+    color: 'primary',
+    id: 'switch-2',
+  },
 }
 
-export const Secondary: Story = ({ args }) => {
-  const [checked, setChecked] = useState(false)
-
-  const handleChange = (newValue: boolean) => {
-    setChecked(newValue)
-  }
-
-  return (
-    <Switch
-      {...args}
-      color='secondary'
-      checked={checked}
-      onChange={handleChange}
-    />
-  )
-}
-
-Secondary.args = {
-  color: 'secondary',
+export const Secondary: Story = {
+  args: {
+    color: 'secondary',
+    id: 'switch-3',
+  },
 }
