@@ -15,3 +15,4 @@ export {
   PopoverTrigger,
   PopoverContent,
 } from './Popover/Popover'
+export { Switch } from './Switch/Switch'
