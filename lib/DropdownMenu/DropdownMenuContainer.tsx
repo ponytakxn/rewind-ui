@@ -5,24 +5,28 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { PopoverContext, orientationType } from './Popover'
+import { DropdownMenuContext, orientationType } from './DropdownMenu'
 import { cva } from 'class-variance-authority'
 import { cn } from '../utils'
 
-const popoverContainerStyles = cva(['relative', 'inline-block'])
+const dropdownMenuContainerStyles = cva([
+  'relative',
+  'inline-block',
+  'w-[200px]',
+])
 
-type PopoverContainerProps = {
+type DropdownMenuContainerProps = {
   orientation: orientationType
 }
 
-type PopoverProps = ComponentProps<'section'> & PopoverContainerProps
+type DropdownMenuProps = ComponentProps<'section'> & DropdownMenuContainerProps
 
-export const PopoverContainer = forwardRef<HTMLElement, PopoverProps>(
+export const DropdownMenuContainer = forwardRef<HTMLElement, DropdownMenuProps>(
   ({ orientation, children, className, ...props }) => {
     const [isOpen, setIsOpen] = useState(false)
     const ref: React.MutableRefObject<HTMLElement | null> = useRef(null)
 
-    const popoverContext = {
+    const dropdownMenuContext = {
       orientation,
       isOpen,
       setIsOpen,
@@ -43,15 +47,15 @@ export const PopoverContainer = forwardRef<HTMLElement, PopoverProps>(
     }, [ref])
 
     return (
-      <PopoverContext.Provider value={popoverContext}>
+      <DropdownMenuContext.Provider value={dropdownMenuContext}>
         <section
           ref={ref}
-          className={cn(popoverContainerStyles({ className }))}
+          className={cn(dropdownMenuContainerStyles({ className }))}
           {...props}
         >
           {children}
         </section>
-      </PopoverContext.Provider>
+      </DropdownMenuContext.Provider>
     )
   }
 )

@@ -1,4 +1,4 @@
-import { ComponentProps, forwardRef, useContext } from 'react'
+import React, { ComponentProps, forwardRef, useContext } from 'react'
 import { PopoverContext } from './Popover'
 import { cva } from 'class-variance-authority'
 import { cn } from '../utils'
