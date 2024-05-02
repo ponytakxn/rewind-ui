@@ -16,3 +16,12 @@ export {
   PopoverContent,
 } from './Popover/Popover'
 export { Switch } from './Switch/Switch'
+export {
+  DropdownMenuContainer,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTitle,
+  DropdownMenuTrigger,
+} from './DropdownMenu/DropdownMenu'
