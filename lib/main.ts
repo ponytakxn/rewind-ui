@@ -25,3 +25,11 @@ export {
   DropdownMenuTitle,
   DropdownMenuTrigger,
 } from './DropdownMenu/DropdownMenu'
+export {
+  NavMenuContainer,
+  NavMenuList,
+  NavMenuItem,
+  NavMenuContent,
+  NavMenuTrigger,
+  NavMenuSubItem,
+} from './NavMenu/NavMenu'
