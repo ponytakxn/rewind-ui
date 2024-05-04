@@ -2,19 +2,15 @@ import { cva } from 'class-variance-authority'
 import React, { ComponentProps, forwardRef } from 'react'
 import { cn } from '../utils'
 
-const cardFooterStyles = cva(['font-semibold tracking-wider'])
+const cardFooterStyles = cva(['flex gap-xs justify-between'])
 
-type CardFooterProps = ComponentProps<'div'> & {
-  buttonText: string
-  onButtonClick: () => void
-}
+type CardFooterProps = ComponentProps<'div'>
 
 export const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
-  ({ className, children, buttonText, onButtonClick, ...props }, ref) => {
+  ({ className, children, ...props }, ref) => {
     return (
       <div ref={ref} className={cn(cardFooterStyles({ className }))} {...props}>
         {children}
-        <button onClick={onButtonClick}>{buttonText}</button>
       </div>
     )
   }
