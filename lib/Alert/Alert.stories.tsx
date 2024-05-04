@@ -91,7 +91,7 @@ export const info: Story = {
       <>
         <AlertHeader>Informacion</AlertHeader>
         <AlertDescription>
-          Haz logrado completar el formulario correcto
+          Haz logrado completar el formulario correctamente.
         </AlertDescription>
       </>
     ),
