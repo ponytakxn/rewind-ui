@@ -33,3 +33,4 @@ export {
   NavMenuTrigger,
   NavMenuSubItem,
 } from './NavMenu/NavMenu'
+export { Alert, AlertHeader, AlertDescription } from './Alert/main'
