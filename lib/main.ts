@@ -43,3 +43,4 @@ export {
   AccordionItem,
   AccordionTrigger,
 } from './Accordion/main'
+export { Tabs, TabContent, TabsList, TabTrigger } from './Tabs/main'
