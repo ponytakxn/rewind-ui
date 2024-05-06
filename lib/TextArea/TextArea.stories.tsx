@@ -10,6 +10,7 @@ export default meta
 type Story = StoryObj<typeof TextArea>
 
 export const BasicTextArea: Story = {}
+
 export const DisabledTextArea: Story = {
   args: {
     disabled: true,

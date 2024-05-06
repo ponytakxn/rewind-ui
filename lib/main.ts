@@ -34,3 +34,5 @@ export {
   NavMenuSubItem,
 } from './NavMenu/NavMenu'
 export { Alert, AlertHeader, AlertDescription } from './Alert/main'
+export { TextArea } from './TextArea/TextArea'
+export { Card, CardHeader, CardContent, CardFooter } from './Card/main'

@@ -3,8 +3,8 @@ import { cn } from '../utils/index'
 import { cva } from 'class-variance-authority'
 
 const TextAreaStyles = cva([
-  'px-sm py-xs rounded-md max-w-max border border-black',
-  'text-sm disabled:bg-black/20 disbled:text-black/60',
+  'px-sm py-xs rounded-md w-[400px] border border-black focus:outline-secondary',
+  'text-sm disabled:bg-primary/10 disabled:text-primary/70 disabled:border-primary/30 disabled:cursor-not-allowed',
 ])
 
 type TextAreaProps = ComponentProps<'textarea'>
