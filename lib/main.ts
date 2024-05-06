@@ -37,3 +37,9 @@ export { Alert, AlertHeader, AlertDescription } from './Alert/main'
 export { TextArea } from './TextArea/TextArea'
 export { Card, CardHeader, CardContent, CardFooter } from './Card/main'
 export { Separator } from './Separator/Separator'
+export {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from './Accordion/main'
