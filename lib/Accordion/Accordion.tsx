@@ -7,7 +7,7 @@ import React, {
 } from 'react'
 import { cn } from '../utils/'
 
-const accordionStyles = cva(['min-w-max'])
+const accordionStyles = cva([])
 
 type AccordionProps = ComponentProps<'div'>
 
