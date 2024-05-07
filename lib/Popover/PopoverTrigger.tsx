@@ -1,5 +1,5 @@
 import React, { ComponentProps, forwardRef, useContext } from 'react'
-import { PopoverContext } from './Popover'
+import { PopoverContext } from './main'
 import { cva } from 'class-variance-authority'
 import { cn } from '../utils'
 

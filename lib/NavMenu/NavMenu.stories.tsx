@@ -1,26 +1,26 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import {
-  NavMenuContainer,
+  NavMenu,
   NavMenuTrigger,
   NavMenuContent,
   NavMenuList,
   NavMenuItem,
   NavMenuSubItem,
-} from './NavMenu'
+} from './main'
 import React from 'react'
 
-const meta: Meta<typeof NavMenuContainer> = {
-  component: NavMenuContainer,
+const meta: Meta<typeof NavMenu> = {
+  component: NavMenu,
 }
 
 export default meta
 
-type Story = StoryObj<typeof NavMenuContainer>
+type Story = StoryObj<typeof NavMenu>
 
 export const Default: Story = {
   render: () => (
     <div className='flex justify-center'>
-      <NavMenuContainer>
+      <NavMenu>
         <NavMenuList>
           <NavMenuItem dropdown={true}>
             <NavMenuTrigger>Components</NavMenuTrigger>
@@ -73,7 +73,7 @@ export const Default: Story = {
 
           <NavMenuItem>Documentation</NavMenuItem>
         </NavMenuList>
-      </NavMenuContainer>
+      </NavMenu>
     </div>
   ),
 }

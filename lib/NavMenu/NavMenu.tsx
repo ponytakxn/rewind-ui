@@ -1,18 +1,15 @@
-import React, { createContext } from 'react'
+import { cva } from 'class-variance-authority'
+import React, { ComponentProps, forwardRef } from 'react'
+import { cn } from '../utils'
 
-export { NavMenuContainer } from './NavMenuContainer'
-export { NavMenuTrigger } from './NavMenuTrigger'
-export { NavMenuContent } from './NavMenuContent'
-export { NavMenuItem } from './NavMenuItem'
-export { NavMenuList } from './NavMenuList'
-export { NavMenuSubItem } from './NavMenuSubitem'
+const navMenuStyles = cva(['relative', 'inline-block'])
 
-export type NavMenuContextType = {
-  isOpen: boolean
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
+type NavMenuProps = ComponentProps<'nav'>
 
-export const NavMenuContext = createContext<NavMenuContextType>({
-  isOpen: false,
-  setIsOpen: () => {},
-})
+export const NavMenu = forwardRef<HTMLElement, NavMenuProps>(
+  ({ children, className, ...props }, ref) => (
+    <nav ref={ref} className={cn(navMenuStyles({ className }))} {...props}>
+      {children}
+    </nav>
+  )
+)

@@ -1,28 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import {
-  DropdownMenuContainer,
+  DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTitle,
-} from './DropdownMenu'
+} from './main'
 import { Button } from '../Button/Button'
 import React from 'react'
 
-const meta: Meta<typeof DropdownMenuContainer> = {
-  component: DropdownMenuContainer,
+const meta: Meta<typeof DropdownMenu> = {
+  component: DropdownMenu,
 }
 
 export default meta
 
-type Story = StoryObj<typeof DropdownMenuContainer>
+type Story = StoryObj<typeof DropdownMenu>
 
 export const Default: Story = {
   render: () => (
     <div className='flex justify-center mt-[100px]'>
-      <DropdownMenuContainer orientation='bottom'>
+      <DropdownMenu orientation='bottom'>
         <DropdownMenuTrigger>
           <Button variant='outline' color='primary' size='sm'>
             Open Dropdown
@@ -41,7 +41,7 @@ export const Default: Story = {
             <DropdownMenuItem disabled>Item disabled</DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>
-      </DropdownMenuContainer>
+      </DropdownMenu>
     </div>
   ),
 }
@@ -49,7 +49,7 @@ export const Default: Story = {
 export const Top: Story = {
   render: () => (
     <div className='flex justify-center mt-[250px]'>
-      <DropdownMenuContainer orientation='top'>
+      <DropdownMenu orientation='top'>
         <DropdownMenuTrigger>
           <Button variant='outline' color='primary' size='sm'>
             Open Dropdown
@@ -68,7 +68,7 @@ export const Top: Story = {
             <DropdownMenuItem disabled>Item disabled</DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>
-      </DropdownMenuContainer>
+      </DropdownMenu>
     </div>
   ),
 }

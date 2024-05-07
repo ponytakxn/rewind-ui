@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority'
 import React, { forwardRef, ComponentProps, useContext } from 'react'
-import { NavMenuContext } from './NavMenu'
+import { NavMenuContext } from './main'
 import { cn } from '../utils'
 
 const navMenuTriggerStyles = cva([

@@ -10,29 +10,25 @@ export { Label } from './Label/Label'
 export { ProgressBar } from './ProgressBar/ProgressBar'
 export { CarouselContainer, CarouselItem } from './Carousel/Carousel'
 export { ScrollArea } from './ScrollArea/ScrollArea'
-export {
-  PopoverContainer,
-  PopoverTrigger,
-  PopoverContent,
-} from './Popover/Popover'
+export { Popover, PopoverTrigger, PopoverContent } from './Popover/main'
 export { Switch } from './Switch/Switch'
 export {
-  DropdownMenuContainer,
+  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTitle,
   DropdownMenuTrigger,
-} from './DropdownMenu/DropdownMenu'
+} from './DropdownMenu/main'
 export {
-  NavMenuContainer,
+  NavMenu,
   NavMenuList,
   NavMenuItem,
   NavMenuContent,
   NavMenuTrigger,
   NavMenuSubItem,
-} from './NavMenu/NavMenu'
+} from './NavMenu/main'
 export { Alert, AlertHeader, AlertDescription } from './Alert/main'
 export { TextArea } from './TextArea/TextArea'
 export { Card, CardHeader, CardContent, CardFooter } from './Card/main'

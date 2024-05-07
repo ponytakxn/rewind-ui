@@ -1,23 +1,57 @@
-import React, { createContext } from 'react'
+import React, {
+  ComponentProps,
+  forwardRef,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
+import { DropdownMenuContext, orientationType } from './main'
+import { cva } from 'class-variance-authority'
+import { cn } from '../utils'
 
-export { DropdownMenuContainer } from './DropdownMenuContainer'
-export { DropdownMenuContent } from './DropdownMenuContent'
-export { DropdownMenuGroup } from './DropdownMenuGroup'
-export { DropdownMenuItem } from './DropdownMenuItem'
-export { DropdownMenuSeparator } from './DropdownMenuSeparator'
-export { DropdownMenuTitle } from './DropdownMenuTitle'
-export { DropdownMenuTrigger } from './DropdownMenuTrigger'
+const dropdownMenuStyles = cva(['relative', 'inline-block', 'w-[200px]'])
 
-export type DropdownMenuContextType = {
+type Props = {
   orientation: orientationType
-  isOpen: boolean
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export type orientationType = 'top' | 'bottom'
+type DropdownMenuProps = ComponentProps<'section'> & Props
 
-export const DropdownMenuContext = createContext<DropdownMenuContextType>({
-  orientation: 'bottom',
-  isOpen: false,
-  setIsOpen: () => {},
-})
+export const DropdownMenu = forwardRef<HTMLElement, DropdownMenuProps>(
+  ({ orientation, children, className, ...props }) => {
+    const [isOpen, setIsOpen] = useState(false)
+    const ref: React.MutableRefObject<HTMLElement | null> = useRef(null)
+
+    const dropdownMenuContext = {
+      orientation,
+      isOpen,
+      setIsOpen,
+    }
+
+    useEffect(() => {
+      const handleClickOutside = (e: MouseEvent) => {
+        if (ref.current && !ref.current.contains(e.target as Node)) {
+          setIsOpen(false)
+        }
+      }
+
+      document.addEventListener('mousedown', handleClickOutside)
+
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
+    }, [ref])
+
+    return (
+      <DropdownMenuContext.Provider value={dropdownMenuContext}>
+        <section
+          ref={ref}
+          className={cn(dropdownMenuStyles({ className }))}
+          {...props}
+        >
+          {children}
+        </section>
+      </DropdownMenuContext.Provider>
+    )
+  }
+)

@@ -1,27 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { PopoverContainer, PopoverTrigger, PopoverContent } from './Popover'
-import { Button } from '../Button/Button'
+import { Popover, PopoverTrigger, PopoverContent } from './main'
+import { Button } from '../main'
 import React from 'react'
 
-const meta: Meta<typeof PopoverContainer> = {
-  component: PopoverContainer,
+const meta: Meta<typeof Popover> = {
+  component: Popover,
 }
 
 export default meta
 
-type Story = StoryObj<typeof PopoverContainer>
+type Story = StoryObj<typeof Popover>
 
 export const Default: Story = {
   render: () => (
     <div className='flex justify-center mt-[100px]'>
-      <PopoverContainer orientation='bottom'>
+      <Popover orientation='bottom'>
         <PopoverTrigger>
           <Button variant='outline' color='primary' size='sm'>
             Open Popover
           </Button>
         </PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </PopoverContainer>
+      </Popover>
     </div>
   ),
 }
@@ -29,14 +29,14 @@ export const Default: Story = {
 export const Top: Story = {
   render: () => (
     <div className='flex justify-center mt-[100px]'>
-      <PopoverContainer orientation='top'>
+      <Popover orientation='top'>
         <PopoverTrigger>
           <Button variant='outline' color='primary' size='sm'>
             Open Popover
           </Button>
         </PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </PopoverContainer>
+      </Popover>
     </div>
   ),
 }
@@ -44,14 +44,14 @@ export const Top: Story = {
 export const Right: Story = {
   render: () => (
     <div className='flex justify-center mt-[100px]'>
-      <PopoverContainer orientation='right'>
+      <Popover orientation='right'>
         <PopoverTrigger>
           <Button variant='outline' color='primary' size='sm'>
             Open Popover
           </Button>
         </PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </PopoverContainer>
+      </Popover>
     </div>
   ),
 }
@@ -59,14 +59,14 @@ export const Right: Story = {
 export const Left: Story = {
   render: () => (
     <div className='flex justify-center mt-[100px]'>
-      <PopoverContainer orientation='left'>
+      <Popover orientation='left'>
         <PopoverTrigger>
           <Button variant='outline' color='primary' size='sm'>
             Open Popover
           </Button>
         </PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </PopoverContainer>
+      </Popover>
     </div>
   ),
 }
