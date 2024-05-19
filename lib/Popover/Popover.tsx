@@ -1,5 +1,6 @@
-import React, {
+import {
   ComponentProps,
+  MutableRefObject,
   forwardRef,
   useEffect,
   useRef,
@@ -20,7 +21,7 @@ type PopoverProps = ComponentProps<'section'> & Props
 export const Popover = forwardRef<HTMLElement, PopoverProps>(
   ({ orientation, children, className, ...props }) => {
     const [isOpen, setIsOpen] = useState(false)
-    const ref: React.MutableRefObject<HTMLElement | null> = useRef(null)
+    const ref: MutableRefObject<HTMLElement | null> = useRef(null)
 
     const popoverContext = {
       orientation,

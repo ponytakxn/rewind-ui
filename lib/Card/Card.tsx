@@ -1,5 +1,5 @@
 import { VariantProps, cva } from 'class-variance-authority'
-import React, { forwardRef, ComponentProps } from 'react'
+import { forwardRef, ComponentProps } from 'react'
 import { cn } from '../utils/index'
 
 const cardStyles = cva([

@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority'
-import React, { ComponentProps, forwardRef, useState } from 'react'
+import { ComponentProps, forwardRef, useState } from 'react'
 import { cn } from '../utils'
 import { NavMenuContext } from './main'
 

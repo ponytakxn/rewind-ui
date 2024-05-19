@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority'
-import React, {
+import {
   ComponentProps,
   createContext,
   forwardRef,
@@ -41,7 +41,6 @@ export const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(
 
     useEffect(() => {
       activeItem === value ? setIsOpen(true) : setIsOpen(false)
-      console.log(activeItem, value, isOpen)
     }, [activeItem])
 
     return (

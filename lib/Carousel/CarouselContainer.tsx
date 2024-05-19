@@ -1,4 +1,4 @@
-import React, {
+import {
   Children,
   forwardRef,
   useEffect,
@@ -62,7 +62,7 @@ export const CarouselContainer = forwardRef<HTMLElement, CarouselProps>(
         </div>
 
         <div className='absolute bottom-0 py-4 flex justify-center gap-3 w-full'>
-          {[...Array(tabs)].map((s, i) => {
+          {[...Array(tabs)].map((_s, i) => {
             return (
               <div
                 onClick={() => {

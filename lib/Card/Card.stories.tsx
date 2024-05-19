@@ -1,4 +1,3 @@
-import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 import { Card, CardHeader, CardContent, CardFooter } from './main'
 import { Button } from '../main'

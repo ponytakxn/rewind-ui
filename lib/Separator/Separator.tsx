@@ -1,5 +1,5 @@
 import { VariantProps, cva } from 'class-variance-authority'
-import React, { ComponentProps, forwardRef } from 'react'
+import { ComponentProps, forwardRef } from 'react'
 import { cn } from '../utils/'
 
 const separatorStyles = cva(['block border border-primary/30'], {

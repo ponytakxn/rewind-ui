@@ -1,33 +1,32 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import { Checkbox } from './Checkbox';
+import { Meta, StoryObj } from '@storybook/react'
+import { Checkbox } from './Checkbox'
 
 const meta: Meta<typeof Checkbox> = {
   component: Checkbox,
   title: 'Checkbox',
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof Checkbox>;
+type Story = StoryObj<typeof Checkbox>
 
 export const Basic: Story = {
   args: {
     color: 'primary',
   },
-};
+}
 
 export const Secondary: Story = {
   args: {
     color: 'secondary',
   },
-};
+}
 
 export const Danger: Story = {
   args: {
     color: 'danger',
   },
-};
+}
 
 export const Colors: Story = {
   render: () => (
@@ -40,10 +39,8 @@ export const Colors: Story = {
       <Checkbox color='warning' />
     </div>
   ),
-};
+}
 
 export const Disabled: Story = {
-  render: () => (
-    <Checkbox color='primary' disabled />
-  ),
-};
+  render: () => <Checkbox color='primary' disabled />,
+}

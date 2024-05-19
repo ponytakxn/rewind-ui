@@ -1,4 +1,3 @@
-import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 import { Tabs, TabContent, TabsList, TabTrigger } from './main'
 import { Button, Card, CardHeader, CardContent, CardFooter } from '../main'

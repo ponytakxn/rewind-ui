@@ -7,7 +7,6 @@ import {
   NavMenuItem,
   NavMenuSubItem,
 } from './main'
-import React from 'react'
 
 const meta: Meta<typeof NavMenu> = {
   component: NavMenu,

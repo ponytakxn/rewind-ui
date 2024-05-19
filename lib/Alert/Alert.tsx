@@ -1,4 +1,4 @@
-import React, { forwardRef, type ComponentProps } from 'react'
+import { forwardRef, type ComponentProps } from 'react'
 import { cn } from '../utils/index'
 import { cva, VariantProps } from 'class-variance-authority'
 

@@ -1,4 +1,5 @@
-import React, {
+import {
+  MutableRefObject,
   ComponentProps,
   forwardRef,
   useEffect,
@@ -20,7 +21,7 @@ type DropdownMenuProps = ComponentProps<'section'> & Props
 export const DropdownMenu = forwardRef<HTMLElement, DropdownMenuProps>(
   ({ orientation, children, className, ...props }) => {
     const [isOpen, setIsOpen] = useState(false)
-    const ref: React.MutableRefObject<HTMLElement | null> = useRef(null)
+    const ref: MutableRefObject<HTMLElement | null> = useRef(null)
 
     const dropdownMenuContext = {
       orientation,

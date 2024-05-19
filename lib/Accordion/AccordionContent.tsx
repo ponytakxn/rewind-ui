@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority'
-import React, { ComponentProps, forwardRef, useContext } from 'react'
+import { ComponentProps, forwardRef, useContext } from 'react'
 import { AccordionItemContext } from './AccordionItem'
 import { cn } from '../utils/'
 

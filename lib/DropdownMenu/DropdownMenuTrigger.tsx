@@ -1,4 +1,4 @@
-import React, { ComponentProps, forwardRef, useContext } from 'react'
+import { ComponentProps, forwardRef, useContext } from 'react'
 import { DropdownMenuContext } from './main'
 import { cva } from 'class-variance-authority'
 import { cn } from '../utils'

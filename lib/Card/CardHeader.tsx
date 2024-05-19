@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority'
-import React, { ComponentProps, forwardRef } from 'react'
+import { ComponentProps, forwardRef } from 'react'
 import { cn } from '../utils'
 
 const cardHeaderStyles = cva(['font-medium tracking-wider text-md'])

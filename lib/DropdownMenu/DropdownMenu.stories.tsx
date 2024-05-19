@@ -9,7 +9,6 @@ import {
   DropdownMenuTitle,
 } from './main'
 import { Button } from '../Button/Button'
-import React from 'react'
 
 const meta: Meta<typeof DropdownMenu> = {
   component: DropdownMenu,
