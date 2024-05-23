@@ -39,3 +39,10 @@ export {
   AccordionTrigger,
 } from './Accordion/main'
 export { Tabs, TabContent, TabsList, TabTrigger } from './Tabs/main'
+export {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+} from './Dialog/main'
