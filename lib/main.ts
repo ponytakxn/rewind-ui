@@ -46,3 +46,13 @@ export {
   DialogHeader,
   DialogFooter,
 } from './Dialog/main'
+export {
+  Drawer,
+  DrawerCloseBtn,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerDescription,
+  DrawerTrigger,
+} from './Drawer/main'
