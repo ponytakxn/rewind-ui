@@ -50,6 +50,30 @@ export default {
       xxl: ['48px', '60px'],
       xxxl: ['60px', '72px'],
     },
+    animation: {
+      folderInBottom: 'folderInBottom .8s ease forwards',
+      folderInTop: 'folderInTop .8s ease forwards',
+      folderInLeft: 'folderInLeft .8s ease forwards',
+      folderInRight: 'folderInRight .8s ease forwards',
+    },
+    keyframes: {
+      folderInBottom: {
+        '0%': { bottom: '-60vh' },
+        '100%': { bottom: '0' },
+      },
+      folderInTop: {
+        '0%': { top: '-60vh' },
+        '100%': { top: '0' },
+      },
+      folderInLeft: {
+        '0%': { left: '-40vw' },
+        '100%': { left: '0' },
+      },
+      folderInRight: {
+        '0%': { right: '-40vw' },
+        '100%': { right: '0' },
+      },
+    },
   },
   plugins: [
     function ({ addUtilities, theme }) {
