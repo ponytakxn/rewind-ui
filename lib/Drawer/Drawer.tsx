@@ -1,27 +1,19 @@
-import {
-  ComponentProps,
-  MutableRefObject,
-  forwardRef,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
-import { DrawerContext, Orientation } from './main'
+import { ComponentProps, forwardRef, useEffect, useState } from 'react'
+import { DrawerContext, OrientationType } from './main'
 import { cva } from 'class-variance-authority'
 import { cn } from '../utils'
 
 const drawerStyles = cva(['overflow-hidden'])
 
 interface Props {
-  orientation: Orientation
+  orientation: OrientationType
 }
 
 type DrawerProps = ComponentProps<'section'> & Props
 
-export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
-  ({ className, children, orientation, ...props }) => {
+export const Drawer = forwardRef<HTMLElement, DrawerProps>(
+  ({ className, children, orientation, ...props }, ref) => {
     const [isOpen, setIsOpen] = useState(false)
-    const ref: MutableRefObject<HTMLElement | null> = useRef(null)
 
     useEffect(() => {
       if (isOpen) {
@@ -30,20 +22,6 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
         document.body.classList.remove('overflow-hidden')
       }
     }, [isOpen])
-
-    useEffect(() => {
-      const handleClickOutside = (e: MouseEvent) => {
-        if (ref.current && !ref.current.contains(e.target as Node)) {
-          setIsOpen(false)
-        }
-      }
-
-      document.addEventListener('mousedown', handleClickOutside)
-
-      return () => {
-        document.removeEventListener('mousedown', handleClickOutside)
-      }
-    }, [ref])
 
     return (
       <DrawerContext.Provider value={{ isOpen, setIsOpen, orientation }}>
