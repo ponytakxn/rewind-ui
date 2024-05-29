@@ -10,7 +10,7 @@ export default meta
 
 type Story = StoryObj<typeof Card>
 
-export const info: Story = {
+export const Info: Story = {
   args: {
     children: (
       <>

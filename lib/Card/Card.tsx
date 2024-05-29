@@ -1,4 +1,4 @@
-import { VariantProps, cva } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
 import { forwardRef, ComponentProps } from 'react'
 import { cn } from '../utils/index'
 
@@ -8,7 +8,7 @@ const cardStyles = cva([
   'border border-primary',
 ])
 
-type CardProps = ComponentProps<'div'> & VariantProps<typeof cardStyles>
+type CardProps = ComponentProps<'div'>
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ children, className, ...props }, ref) => {
