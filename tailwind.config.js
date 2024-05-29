@@ -51,27 +51,27 @@ export default {
       xxxl: ['60px', '72px'],
     },
     animation: {
-      folderInBottom: 'folderInBottom .8s ease forwards',
-      folderInTop: 'folderInTop .8s ease forwards',
-      folderInLeft: 'folderInLeft .8s ease forwards',
-      folderInRight: 'folderInRight .8s ease forwards',
+      slideInBottom: 'slideInBottom .8s ease forwards',
+      slideInTop: 'slideInTop .8s ease forwards',
+      slideInLeft: 'slideInLeft .8s ease forwards',
+      slideInRight: 'slideInRight .8s ease forwards',
     },
     keyframes: {
-      folderInBottom: {
-        '0%': { bottom: '-60vh' },
-        '100%': { bottom: '0' },
+      slideInBottom: {
+        '0%': { transform: 'translateY(100%)' },
+        '100%': { transform: 'translateY(0)' },
       },
-      folderInTop: {
-        '0%': { top: '-60vh' },
-        '100%': { top: '0' },
+      slideInTop: {
+        '0%': { transform: 'translateY(-100%)' },
+        '100%': { transform: 'translateY(0)' },
       },
-      folderInLeft: {
-        '0%': { left: '-40vw' },
-        '100%': { left: '0' },
+      slideInLeft: {
+        '0%': { transform: 'translateX(-100%)' },
+        '100%': { transform: 'translateX(0)' },
       },
-      folderInRight: {
-        '0%': { right: '-40vw' },
-        '100%': { right: '0' },
+      slideInRight: {
+        '0%': { transform: 'translateX(100%)' },
+        '100%': { transform: 'translateX(0)' },
       },
     },
   },
