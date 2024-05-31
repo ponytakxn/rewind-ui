@@ -59,3 +59,8 @@ export {
 export { Toggle } from './Toggle/Toggle'
 export { HoverCard, HoverCardContent, HoverCardTrigger } from './HoverCard/main'
 export { Pagination } from './Pagination/Pagination'
+export {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from './Collapsible/main'
