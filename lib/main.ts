@@ -56,3 +56,6 @@ export {
   DrawerDescription,
   DrawerTrigger,
 } from './Drawer/main'
+export { Toggle } from './Toggle/Toggle'
+export { HoverCard, HoverCardContent, HoverCardTrigger } from './HoverCard/main'
+export { Pagination } from './Pagination/Pagination'
