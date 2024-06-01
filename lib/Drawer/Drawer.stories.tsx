@@ -30,7 +30,7 @@ export const Default: Story = {
             Open Drawer
           </Button>
         </DrawerTrigger>
-        <DrawerContent>
+        <DrawerContent className='items-center !gap-10'>
           <DrawerHeader>
             <DrawerTitle>Edit your profile</DrawerTitle>
             <DrawerDescription>

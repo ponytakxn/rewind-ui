@@ -6,7 +6,7 @@ import { cn } from '../utils'
 const popoverContentStyles = cva([
   'absolute',
   'w-[200px]',
-  'bg-transparent',
+  'bg-white',
   'border',
   'border-primary/70',
   'p-sm',

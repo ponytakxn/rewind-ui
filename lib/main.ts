@@ -45,6 +45,8 @@ export {
   DialogContent,
   DialogHeader,
   DialogFooter,
+  DialogTitle,
+  DialogDescription,
 } from './Dialog/main'
 export {
   Drawer,

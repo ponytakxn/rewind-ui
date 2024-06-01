@@ -1,6 +1,6 @@
 {
   "name": "rewind-uikit",
-  "version": "0.1.5",
+  "version": "1.0.1",
   "type": "module",
   "files": [
     "dist"
@@ -37,6 +37,7 @@
     "clsx": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rewind-uikit": "^1.0.0",
     "tailwind-merge": "^2.2.2",
     "vite-tsconfig-paths": "^4.3.2"
   },

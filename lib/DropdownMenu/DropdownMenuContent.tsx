@@ -6,7 +6,7 @@ import { cn } from '../utils'
 const dropdownMenuContentStyles = cva([
   'absolute',
   'w-full',
-  'bg-transparent',
+  'bg-white',
   'border',
   'border-primary/30',
   'p-[1px]',
