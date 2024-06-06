@@ -29,6 +29,8 @@ export const HoverCard = forwardRef<HTMLElement, HoverCardProps>(
     }
 
     useEffect(() => {
+      const hoverCardRef = ref.current
+
       const clearHideTimeout = () => {
         if (hideTimeoutRef.current) {
           clearTimeout(hideTimeoutRef.current)
@@ -39,7 +41,7 @@ export const HoverCard = forwardRef<HTMLElement, HoverCardProps>(
       const handleMouseEnter = () => {
         clearHideTimeout()
 
-        const rect = ref.current!.getBoundingClientRect()
+        const rect = hoverCardRef!.getBoundingClientRect()
         const windowHeight = window.innerHeight
         const halfWindowHeight = windowHeight / 2
 
@@ -60,12 +62,12 @@ export const HoverCard = forwardRef<HTMLElement, HoverCardProps>(
         }, 200)
       }
 
-      ref.current!.addEventListener('mouseenter', handleMouseEnter)
-      ref.current!.addEventListener('mouseleave', handleMouseLeave)
+      hoverCardRef!.addEventListener('mouseenter', handleMouseEnter)
+      hoverCardRef!.addEventListener('mouseleave', handleMouseLeave)
 
       return () => {
-        ref.current!.removeEventListener('mouseenter', handleMouseEnter)
-        ref.current!.removeEventListener('mouseleave', handleMouseLeave)
+        hoverCardRef!.removeEventListener('mouseenter', handleMouseEnter)
+        hoverCardRef!.removeEventListener('mouseleave', handleMouseLeave)
       }
     }, [ref])
 
