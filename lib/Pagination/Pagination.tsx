@@ -29,7 +29,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
       <div ref={ref} className={cn(paginationStyles({ className }))} {...props}>
         <div className='py-8 flex justify-center'>
           {page !== 1 && (
-            <a href={`/${slug}/${page - 1}`}>
+            <a href={`/${slug}${page - 1}`}>
               <button
                 onClick={() => handlePagination(page - 1)}
                 className={`${pageItemStyles} ${sidesStyles}`}
@@ -39,7 +39,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
             </a>
           )}
 
-          <a href={`/${slug}/1`}>
+          <a href={`/${slug}1`}>
             <button
               onClick={() => handlePagination(1)}
               className={
@@ -55,7 +55,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
           {page > 3 && <div className={separatorStyles}>...</div>}
 
           {page === totalPages && totalPages > 3 && (
-            <a href={`/${slug}/${page - 2}`}>
+            <a href={`/${slug}${page - 2}`}>
               <button
                 onClick={() => handlePagination(page - 2)}
                 className={pageItemStyles}
@@ -66,7 +66,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
           )}
 
           {page > 2 && (
-            <a href={`/${slug}/${page - 1}`}>
+            <a href={`/${slug}${page - 1}`}>
               <button
                 onClick={() => handlePagination(page - 1)}
                 className={pageItemStyles}
@@ -86,7 +86,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
           )}
 
           {page < totalPages - 1 && (
-            <a href={`/${slug}/${page + 1}`}>
+            <a href={`/${slug}${page + 1}`}>
               <button
                 onClick={() => handlePagination(page + 1)}
                 className={pageItemStyles}
@@ -97,7 +97,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
           )}
 
           {page === 1 && totalPages > 3 && (
-            <a href={`/${slug}/${page + 2}`}>
+            <a href={`/${slug}${page + 2}`}>
               <button
                 onClick={() => handlePagination(page + 2)}
                 className={pageItemStyles}
@@ -109,7 +109,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
 
           {page < totalPages - 2 && <div className={separatorStyles}>...</div>}
 
-          <a href={`/${slug}/${totalPages}`}>
+          <a href={`/${slug}${totalPages}`}>
             <button
               onClick={() => handlePagination(totalPages)}
               className={
@@ -123,7 +123,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
           </a>
 
           {page !== totalPages && (
-            <a href={`/${slug}/${page + 1}`}>
+            <a href={`/${slug}${page + 1}`}>
               <button
                 onClick={() => handlePagination(page + 1)}
                 className={`${pageItemStyles} ${sidesStyles}`}
