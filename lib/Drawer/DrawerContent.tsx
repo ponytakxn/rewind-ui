@@ -23,19 +23,19 @@ const drawerContentStyles = cva([
 const getOrientation = (orientation: OrientationType) => {
   switch (orientation) {
     case 'top':
-      return 'fixed w-screen h-[50vh] min-h-max top-0 left-0 z-20 animate-slideInTop'
+      return 'fixed w-screen h-[50vh] xs:h-[90dvh] min-h-max top-0 left-0 z-20 animate-slideInTop'
 
     case 'bottom':
-      return 'fixed w-screen h-[50vh] min-h-max bottom-0 left-0 z-20 animate-slideInBottom'
+      return 'fixed w-screen h-[50vh] xs:h-[90dvh] min-h-max bottom-0 left-0 z-20 animate-slideInBottom'
 
     case 'left':
-      return 'fixed w-[25vw] h-screen min-w-max left-0 top-0 z-20 animate-slideInLeft'
+      return 'fixed w-[25vw] h-screen xs:w-[90dvw] xs:max-w-screen sm:min-w-max left-0 top-0 z-20 animate-slideInLeft'
 
     case 'right':
-      return 'fixed w-[25vw] h-screen min-w-max right-0 top-0 z-20 animate-slideInRight'
+      return 'fixed w-[25vw] h-screen xs:w-[90dvw] xs:max-w-screen sm:min-w-max right-0 top-0 z-20 animate-slideInRight'
 
     default:
-      return 'fixed w-screen h-[50vh] min-h-max bottom-0 left-0 z-20 animate-slideInBottom'
+      return 'fixed w-screen h-[50vh] xs:h-[90dvh] min-h-max bottom-0 left-0 z-20 animate-slideInBottom'
   }
 }
 
@@ -62,7 +62,7 @@ export const DrawerContent = forwardRef<HTMLDivElement, DrawerContentProps>(
 
     return (
       <div className={`${isOpen ? 'block' : 'hidden'}`}>
-        <div className='fixed w-screen h-screen h- bg-black/70 z-10 overflow-hidden top-0 left-0' />
+        <div className='fixed w-screen h-screen bg-black/70 z-10 overflow-hidden top-0 left-0' />
 
         <div ref={ref} className={getOrientation(orientation)}>
           <div className={cn(drawerContentStyles({ className }))} {...props}>

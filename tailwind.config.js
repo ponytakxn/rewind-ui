@@ -38,6 +38,10 @@ export default {
         bold: { 'font-variation-settings': "'wght' 700" },
         extrabold: { 'font-variation-settings': "'wght' 800" },
       },
+      screens: {
+        xs: { max: '479px' },
+        sm: '480px',
+      },
     },
     fontSize: {
       xxs: ['8px', '14px'],

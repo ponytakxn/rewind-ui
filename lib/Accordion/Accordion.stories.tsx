@@ -17,7 +17,7 @@ type Story = StoryObj<typeof Accordion>
 
 export const Default: Story = {
   args: {
-    className: 'w-[400px]',
+    className: 'w-[500px]',
     children: (
       <>
         <AccordionItem value='item-1'>

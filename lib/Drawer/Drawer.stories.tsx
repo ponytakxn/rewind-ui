@@ -38,8 +38,8 @@ export const Default: Story = {
               share.
             </DrawerDescription>
           </DrawerHeader>
-          <form className='flex flex-col gap-xs'>
-            <div className='flex gap-xxs items-center'>
+          <form className='flex flex-col gap-xs xs:max-w-screen'>
+            <div className='flex gap-xxs items-center justify-center xs:max-w-screen'>
               <Label htmlFor='name' className='w-[75px]'>
                 Name
               </Label>
@@ -47,7 +47,7 @@ export const Default: Story = {
                 type='text'
                 placeholder='John Doe'
                 name='name'
-                className='w-[300px]'
+                className='xs:w-[75%] w-[300px]'
               />
             </div>
             <div className='flex gap-xxs items-center'>
@@ -58,7 +58,7 @@ export const Default: Story = {
                 type='email'
                 placeholder='john.doe@email.com'
                 name='email'
-                className='w-[300px]'
+                className='xs:w-[75%] w-[300px]'
               />
             </div>
           </form>

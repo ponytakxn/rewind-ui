@@ -11,8 +11,8 @@ const dialogContentStyles = cva([
   'rounded-sm',
   'text-primary',
   'p-lg',
-  'min-w-max',
-  'w-[400px]',
+  'md:min-w-max',
+  'w-[400px] xs:w-[100dvw] md:max-w-[-webkit-fill-available]',
   'bg-white',
   'flex flex-col gap-md',
 ])
@@ -27,7 +27,7 @@ export const DialogContent = forwardRef<HTMLDivElement, DialogContentProps>(
       <div ref={ref} className={`${isOpen ? 'visible' : 'invisible'}`}>
         <div className='fixed w-screen h-screen bg-black/70 z-10 overflow-hidden top-0 left-0' />
 
-        <div className='fixed left-0 right-0 m-auto z-20 w-max'>
+        <div className='fixed left-0 right-0 m-auto z-20 w-max md:max-w-[-webkit-fill-available] xs:w-[100dvw]'>
           <div className={cn(dialogContentStyles({ className }))} {...props}>
             {!isAlert && (
               <div

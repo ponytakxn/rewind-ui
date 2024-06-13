@@ -17,7 +17,7 @@ export const Default: Story = {
       <>
         <div className='flex justify-between'>
           <div>This is a collapsible test</div>
-          <CollapsibleTrigger>
+          <CollapsibleTrigger className='max-h-6'>
             <div style={{ transform: 'scale(.75)' }}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
