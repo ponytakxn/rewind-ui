@@ -2,7 +2,7 @@ import { forwardRef, ComponentProps } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '../utils/index'
 
-const progressBarStyles = cva([], {
+const progressBarStyles = cva(['max-w-[-webkit-fill-available]'], {
   variants: {
     color: {
       primary: 'bg-primary',

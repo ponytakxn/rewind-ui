@@ -5,11 +5,12 @@ import { cn } from '../utils'
 
 const popoverContentStyles = cva([
   'absolute',
-  'w-[200px]',
+  'min-w-full xs:max-w-[95vw] md:max-w-[95vw]',
   'bg-white',
   'border',
   'border-primary/70',
   'p-sm',
+  '[@media(max-width:768px)]:bottom-position',
 ])
 
 type PopoverContentProps = ComponentProps<'div'>

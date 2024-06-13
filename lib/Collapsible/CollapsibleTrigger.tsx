@@ -4,7 +4,7 @@ import { cn } from '../utils/'
 import { CollapsibleContext } from './main'
 
 const collapsibleTriggerStyles = cva([
-  'cursor-pointer rounded-sm hover:bg-primary/10',
+  'cursor-pointer rounded-sm hover:bg-primary/10 self-center',
 ])
 
 type CollapsibleTriggerProps = ComponentProps<'div'>

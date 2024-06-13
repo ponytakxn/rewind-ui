@@ -2,7 +2,9 @@ import { cva } from 'class-variance-authority'
 import { ComponentProps, forwardRef } from 'react'
 import { cn } from '../utils'
 
-const cardFooterStyles = cva(['flex gap-xs justify-between'])
+const cardFooterStyles = cva([
+  'flex gap-xs relative justify-between max-w-[-webkit-fill-available]',
+])
 
 type CardFooterProps = ComponentProps<'div'>
 

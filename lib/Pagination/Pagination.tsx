@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority'
 import { ComponentProps, forwardRef } from 'react'
 import { cn } from '../utils'
 
-const paginationStyles = cva([])
+const paginationStyles = cva(['max-w-[-webkit-fill-available]'])
 
 const pageItemStyles =
   'bg-transparent border-none h-8 w-8 mx-1 rounded-[50%] font-bold cursor-pointer text-primary hover:underline focus:outline-0'
@@ -10,7 +10,7 @@ const pageItemStyles =
 const sidesStyles =
   'shadow-[transparent_0_0_0_1px_transparent_0_0_0_4px_rgba(0,0,0,0.18)_0_2px_4px] hover:no-decoration hover:shadow-[transparent_0_0_0_1px_transparent_0_0_0_4px_rgba(0,0,0,0.12)_0_6px_16px]'
 
-const activeStyles = '!bg-primary !text-secondary'
+const activeStyles = '!bg-primary !text-secondary !min-w-8'
 
 const separatorStyles = 'w-4 mx-1'
 

@@ -19,7 +19,9 @@ export const Default: Story = {
             Open Popover
           </Button>
         </PopoverTrigger>
-        <PopoverContent>Content</PopoverContent>
+        <PopoverContent className='w-[400px]'>
+          Content contenasdkn mdoiwa oasmdwqom doiawm{' '}
+        </PopoverContent>
       </Popover>
     </div>
   ),

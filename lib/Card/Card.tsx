@@ -3,7 +3,7 @@ import { forwardRef, ComponentProps } from 'react'
 import { cn } from '../utils/index'
 
 const cardStyles = cva([
-  'relative px-md py-sm rounded-md max-w-max',
+  'relative px-md py-sm rounded-md max-w-[-webkit-fill-available]',
   'flex flex-col gap-xs',
   'border border-primary',
 ])

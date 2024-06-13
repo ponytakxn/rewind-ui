@@ -3,7 +3,9 @@ import { ComponentProps, forwardRef, useState } from 'react'
 import { cn } from '../utils/'
 import { CollapsibleContext } from './main'
 
-const collapsibleStyles = cva(['relative w-[400px] w-min-max'])
+const collapsibleStyles = cva([
+  'relative w-[400px] w-min-max max-w-[-webkit-fill-available] xs:min-w-[90dvw]',
+])
 
 type CollapsibleProps = ComponentProps<'div'>
 

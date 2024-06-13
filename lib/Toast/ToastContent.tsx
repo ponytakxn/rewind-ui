@@ -5,7 +5,8 @@ import { cn } from '../utils'
 import { createPortal } from 'react-dom'
 
 const toastContentStyles = cva([
-  'fixed bottom-4 right-4 bg-white text-primary border border-primary rounded-md w-[300px] z-20 p-sm',
+  'fixed sm:bottom-4 sm:right-4 bg-white text-primary border border-primary rounded-md w-[300px] z-20 p-sm',
+  'xs:top-4 xs:right-2 xs:left-2 xs:max-w-[-webkit-fill-available]',
 ])
 
 type ToastContentProps = ComponentProps<'div'>
