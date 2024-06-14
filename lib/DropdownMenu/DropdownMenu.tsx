@@ -10,7 +10,7 @@ import { DropdownMenuContext, orientationType } from './main'
 import { cva } from 'class-variance-authority'
 import { cn } from '../utils'
 
-const dropdownMenuStyles = cva(['relative', 'inline-block', 'w-[200px]'])
+const dropdownMenuStyles = cva(['relative', 'inline-block'])
 
 type Props = {
   orientation: orientationType

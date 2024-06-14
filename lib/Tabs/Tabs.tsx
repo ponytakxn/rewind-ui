@@ -7,7 +7,9 @@ import React, {
 } from 'react'
 import { cn } from '../utils/'
 
-const tabsStyles = cva(['relative flex flex-col gap-xxs w-[400px]'])
+const tabsStyles = cva([
+  'relative flex flex-col gap-xxs w-[400px] max-w-[90vw] min-w-min',
+])
 
 type Props = {
   defaultValue: string

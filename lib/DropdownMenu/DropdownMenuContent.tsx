@@ -5,7 +5,7 @@ import { cn } from '../utils'
 
 const dropdownMenuContentStyles = cva([
   'absolute',
-  'w-full',
+  'min-w-full max-w-[90vw] w-max',
   'bg-white',
   'border',
   'border-primary/30',
