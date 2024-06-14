@@ -9,7 +9,6 @@ const navMenuContentStyles = cva([
   'bg-white',
   'lg:border',
   'lg:border-secondary',
-  'mr-lg',
 ])
 
 type NavMenuContentProps = ComponentProps<'div'>

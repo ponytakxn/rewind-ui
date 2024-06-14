@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority'
 import { forwardRef, ComponentProps } from 'react'
 import { cn } from '../utils'
 
-const navMenuListStyles = cva(['flex flex-col lg:flex-row'])
+const navMenuListStyles = cva(['flex flex-col lg:!flex-row'])
 
 type NavMenuListProps = ComponentProps<'div'>
 
