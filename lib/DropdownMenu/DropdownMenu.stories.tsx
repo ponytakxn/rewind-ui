@@ -31,7 +31,10 @@ export const Default: Story = {
           <DropdownMenuTitle>Menu Title</DropdownMenuTitle>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
-            <DropdownMenuItem>Item 1</DropdownMenuItem>
+            <DropdownMenuItem>
+              Item 1 with a lot of text to test the width of this on different
+              devices
+            </DropdownMenuItem>
             <DropdownMenuItem>Item 2</DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />

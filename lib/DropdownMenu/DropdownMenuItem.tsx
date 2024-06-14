@@ -6,6 +6,7 @@ const dropdownMenuItemStyles = cva([
   'w-full',
   'flex',
   'justify-between',
+  'text-start',
   'px-xxs',
   'py-xxxs',
   'rounded-sm',
