@@ -1,12 +1,12 @@
 import { VariantProps, cva } from 'class-variance-authority'
 import { ComponentProps, forwardRef } from 'react'
 
-const navMenuSubitemStyles = cva([], {
+const navMenuSubitemStyles = cva(['max-w-full'], {
   variants: {
     variant: {
       button:
-        'grid gap-xxxs hover:bg-primary hover:text-secondary p-xs transition-colors text-start text-[14px]',
-      link: 'inline-block tracking-wider leading-4 pb-[1px] text-[14px] hover:bg-primary hover:text-secondary hover:underline transition-colors ease-in-out duration-40',
+        'grid gap-xxxs hover:bg-primary hover:text-secondary lg:p-xs p-xxs transition-colors text-start text-[14px]',
+      link: 'inline-block tracking-wider leading-4 lg:pb-[1px] p-xxs text-[14px] hover:bg-primary hover:text-secondary hover:underline transition-colors ease-in-out duration-40',
     },
   },
 })

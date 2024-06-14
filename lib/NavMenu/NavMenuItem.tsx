@@ -3,7 +3,7 @@ import { ComponentProps, forwardRef, useState } from 'react'
 import { cn } from '../utils'
 import { NavMenuContext } from './main'
 
-const navMenuItemStyles = cva(['relative inline-block'])
+const navMenuItemStyles = cva(['relative inline-block mx-md lg:mx-0'])
 
 type Props = {
   dropdown?: boolean

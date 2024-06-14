@@ -18,13 +18,13 @@ type Story = StoryObj<typeof NavMenu>
 
 export const Default: Story = {
   render: () => (
-    <div className='flex justify-center'>
+    <div className='flex lg:justify-center'>
       <NavMenu>
         <NavMenuList>
           <NavMenuItem dropdown={true}>
             <NavMenuTrigger>Components</NavMenuTrigger>
             <NavMenuContent>
-              <ul className='w-[300px]'>
+              <ul className='lg:w-[300px]'>
                 <li>
                   <NavMenuSubItem variant='button' title='Buttons'>
                     Aquí va la descripción de los botones donde esperamos que

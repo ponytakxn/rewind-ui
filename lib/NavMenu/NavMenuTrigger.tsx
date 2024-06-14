@@ -5,9 +5,10 @@ import { cn } from '../utils'
 
 const navMenuTriggerStyles = cva([
   'px-xs py-xxs',
-  'flex gap-md',
+  'flex lg:gap-md justify-between',
   'cursor-pointer',
-  'mb-xxxs',
+  'lg:mb-xxxs lg:mr-0',
+  'mb-xs',
 ])
 
 type NavMenuTriggerProps = ComponentProps<'div'>

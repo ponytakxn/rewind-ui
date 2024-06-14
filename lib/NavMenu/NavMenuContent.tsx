@@ -4,11 +4,12 @@ import { cn } from '../utils'
 import { NavMenuContext } from './main'
 
 const navMenuContentStyles = cva([
-  'absolute',
-  'px-sm py-xxs',
+  'inline-block lg:absolute',
+  'lg:px-sm py-xxxs',
   'bg-white',
-  'border',
-  'border-secondary',
+  'lg:border',
+  'lg:border-secondary',
+  'mr-lg',
 ])
 
 type NavMenuContentProps = ComponentProps<'div'>
