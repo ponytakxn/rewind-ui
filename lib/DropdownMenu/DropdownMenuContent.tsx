@@ -4,7 +4,7 @@ import { cva } from 'class-variance-authority'
 import { cn } from '../utils'
 
 const dropdownMenuContentStyles = cva([
-  'absolute',
+  'absolute z-20',
   'min-w-full max-w-[90vw] w-max',
   'bg-white',
   'border',

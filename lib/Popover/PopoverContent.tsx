@@ -4,7 +4,7 @@ import { cva } from 'class-variance-authority'
 import { cn } from '../utils'
 
 const popoverContentStyles = cva([
-  'absolute',
+  'absolute z-20',
   'min-w-full xs:max-w-[95vw] md:max-w-[95vw]',
   'bg-white',
   'border',
