@@ -15,15 +15,13 @@ export const Info: Story = {
     children: (
       <>
         <CardHeader>Información</CardHeader>
-        <CardContent>
-          ¿Está seguro que desea continuar con la acción?
-        </CardContent>
+        <CardContent>You want to continue?</CardContent>
         <CardFooter>
           <Button size='sm' variant='solid' color='success'>
-            Continuar
+            Continue
           </Button>
           <Button size='sm' variant='solid' color='danger'>
-            Cancelar
+            Cancel
           </Button>
         </CardFooter>
       </>

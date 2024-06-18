@@ -14,8 +14,8 @@ export const Default: Story = {
     dismissTime: 3000,
     children: (
       <>
-        <ToastTrigger>Aló?</ToastTrigger>
-        <ToastContent>Hoy día no atiendo weone, no wei</ToastContent>
+        <ToastTrigger>Show toast</ToastTrigger>
+        <ToastContent>Congrats! This is a toast message!</ToastContent>
       </>
     ),
   },

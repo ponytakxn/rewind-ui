@@ -21,9 +21,9 @@ export const Default: Story = {
           </HoverCardTrigger>
           <HoverCardContent>
             <Card className='w-[300px]'>
-              <CardHeader>Info perfil</CardHeader>
-              <CardContent>Aquí va el perfil y toda su información</CardContent>
-              <CardFooter>El footer</CardFooter>
+              <CardHeader>Profile</CardHeader>
+              <CardContent>Your profile information</CardContent>
+              <CardFooter>Add a footer here</CardFooter>
             </Card>
           </HoverCardContent>
         </HoverCard>
@@ -35,9 +35,9 @@ export const Default: Story = {
           </HoverCardTrigger>
           <HoverCardContent>
             <Card className='w-[300px]'>
-              <CardHeader>Info perfil</CardHeader>
-              <CardContent>Aquí va el perfil y toda su información</CardContent>
-              <CardFooter>El footer</CardFooter>
+              <CardHeader>Profile</CardHeader>
+              <CardContent>Your profile information</CardContent>
+              <CardFooter>Add a footer here</CardFooter>
             </Card>
           </HoverCardContent>
         </HoverCard>

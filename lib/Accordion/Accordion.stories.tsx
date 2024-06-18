@@ -21,26 +21,29 @@ export const Default: Story = {
     children: (
       <>
         <AccordionItem value='item-1'>
-          <AccordionTrigger>Este item se expande?</AccordionTrigger>
+          <AccordionTrigger>Is this UI kit free?</AccordionTrigger>
           <AccordionContent>
-            <p>Ps parece que sí, mira tú como me expando wey</p>
+            <p>Yes, it is.</p>
           </AccordionContent>
         </AccordionItem>
         <Separator display='horizontal' className='w-full' />
         <AccordionItem value='item-2'>
-          <AccordionTrigger>Y este?</AccordionTrigger>
+          <AccordionTrigger>
+            Can I custom every component of the library?
+          </AccordionTrigger>
           <AccordionContent>
-            <p>
-              Ps parece que sí, mira tú como me expando wey mira mira mira mira
-              miraaaaaa
-            </p>
+            <p>Yes, you can, check the documentation.</p>
           </AccordionContent>
         </AccordionItem>
         <Separator display='horizontal' className='w-full' />
         <AccordionItem value='item-3'>
-          <AccordionTrigger>Este yo creo que ya no, no?</AccordionTrigger>
+          <AccordionTrigger>
+            Can I use references for each component?
+          </AccordionTrigger>
           <AccordionContent>
-            <p>Ps parece que sí, mira tú como me expando wey</p>
+            <p>
+              Absolutely! Access to reference of the element with the ref prop.
+            </p>
           </AccordionContent>
         </AccordionItem>
         <Separator display='horizontal' className='w-full' />

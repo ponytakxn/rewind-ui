@@ -32,7 +32,7 @@ export const Ghost: Story = {
     size: 'lg',
     variant: 'ghost',
     color: 'primary',
-    children: 'This is a button with a hell out of text',
+    children: 'Ghost',
   },
 }
 
