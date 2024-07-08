@@ -22,6 +22,7 @@ type Story = StoryObj<typeof Dialog>
 
 export const Default: Story = {
   args: {
+    defaultOpen: true,
     children: (
       <>
         <DialogTrigger>

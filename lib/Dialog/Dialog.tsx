@@ -7,13 +7,17 @@ const dialogStyles = cva(['overflow-hidden'])
 
 interface Props {
   isAlert?: boolean
+  defaultOpen?: boolean
 }
 
 type DialogProps = ComponentProps<'section'> & Props
 
 export const Dialog = forwardRef<HTMLDivElement, DialogProps>(
-  ({ className, children, isAlert = false, ...props }, ref) => {
-    const [isOpen, setIsOpen] = useState(false)
+  (
+    { className, children, isAlert = false, defaultOpen = false, ...props },
+    ref
+  ) => {
+    const [isOpen, setIsOpen] = useState(defaultOpen)
 
     useEffect(() => {
       if (isOpen) {
